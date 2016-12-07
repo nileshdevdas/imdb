@@ -1,0 +1,21 @@
+<div class="container" >
+<input type="text" [(ngModel)]="mname" class="form-control">
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Rating
+        </th>
+    </tr>
+    <tr *ngFor="let movie of movies | moviefilter:mname">
+        <td>{{movie.name}}</td>
+        <td>{{movie.category}}</td>
+        <td>{{movie.rating}}</td>
+    </tr>
+</table>
+</div>
