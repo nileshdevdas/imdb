@@ -1,0 +1,721 @@
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <project url>
+git push -f origin master
+
+
+Persistent Angular 5-8 July
+
+1. Angular2 
+	a) Visual Studio Code : 
+	b) node (Npm installer)
+	c) git (to download seed projects)
+	d) Bootstrap to decorate 
+	e) We typicode for json 
+
+2. Check your setup : 
+	c:\> npm
+		 node 
+		 git 
+	Check you visual studio code 
+	And check Chrome Availibility 
+	Check you Internet access 
+
+3. 
+
+import {Component} from '@angular/core';
+
+
+
+@Component({
+	selector : 'login', 
+	templateUrl :  '<h1 (click)="clickme($event)" >xxxxxxxxx'
+})
+export clavalidateUser(): void{
+		// 
+		console.log("Validating")
+
+	}
+
+	clickme(event):void {
+
+	}ss  LoginComponent {
+	username:string = "username"; 
+	password: number = ""; 	
+
+	
+} 
+
+
+<login></login>
+
+
+function LoginComponent(){
+	constructor(helloService:HelloService)
+
+}
+import {Injectible} from '@angular/core'; 
+
+@Injectible()
+export class  HelloService {
+
+	constructor (str1:string ){
+
+	}
+
+
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+
+	getCities() : string[]{
+		return ["Pune","Colombo","Goa"]
+	}
+}
+
+the idea of having this a service 
+
+config {
+	
+	{
+		path : 'home', 
+		component : LOginComponent
+	},
+
+	{
+		path : 'home', 
+		component : LOginComponent
+	}
+
+	{
+		path : 'home', 
+		component : LOginComponent
+	}
+
+	{
+		path : 'home', 
+		component : LOginComponent
+	}
+
+	{
+		path : 'home1', 
+		component : TestComponent
+	}
+
+}
+
+
+Router.forRoot(cinfig )
+<root>
+<menu></menu>
+<router-outlet></router-outlet>
+</root>
+
+
+
+for any purspose of installing typescript 
+
+npm and npm comes only with node
+
+1. you will neeed to install node with which you will get 
+	npm 
+
+2.  npm install -g typescript 
+
+3.  tsc --> typescript compile   
+	brackets 
+	sublime-text 
+	atom 
+	visual-studio code 
+
+4. i will create simple ts file 
+interface IWelcome {
+    print();
+}
+
+export class Welcome implements IWelcome{
+    storeName : string = "MyStore";
+    username : string; 
+    password : string; 
+    print(){        
+    }
+    login ():number{
+        return 1; 
+    }
+    logout(): boolean {
+        return true; 
+    }
+    constructor(){
+        console.log("Construtor of the Welome ");
+    }
+}
+
+var w1 = new Welcome(); 
+w1.print(); 
+w1.login(); 
+w1.logout();
+
+Compile the ts : 
+tsc -w  yourfile.ts (this is in watch mode ) 
+
+make the changes to the file and you can see the changes 
+get refelected 
+
+How to test : 
+	node yourfile.js 
+
+
+
+Component ---> 
+
+a) How do i login ?  
+	how do authenticate users ? 
+
+
+
+User----- > Server ---> Challenge ---> Input ---> Server --> 
+	Authenticate --->  Store token (Session)==> Server Side ---> 
+		---> Session Id (Cookied) Per Session Cookie to the client and the client would  on every request 
+			send this information back to the server -> 
+				server use some type verification .... 
+
+
+Server Side doesn have session :- 
+	Rest / Microservice --> 
+		====> in each call i will need to send my details --> 
+
+
+on the client ---> 
+	sessionStorage 
+	localStorage 
+
+
+Server---> Session (HttpSession/AspSession/Server side stores )
+
+are we using any of the following technologies 
+	       a http :- 
+	       	api / get /put/post /head /delete 
+	       		http/https without having any state stored on the server
+Rest .Net 
+Rest .java 
+
+
+microservices : 
+
+
+setAttribute 
+getAttribute on the servide 
+
+Client Side Authentication ---> ----- > Authenticate myself 
+generated a token ----> i would definitely need to store somewhere 
+
+what about cache ? 
+
+
+1. two places to storage 
+	localStorage  (applicable only till the user using the browser )
+	sessionStorage 
+		as long as the browser is open ? 
+
+2. how access i access this data : 
+	LocalStorage  / LocalStorageService
+	SessionStorage / SessionStorageService 
+
+
+	npm  --save  install  Ng2Webstorage
+
+	@LocalStorage()
+	isLogged 
+
+	@SessionStorage()
+	isLogged 
+
+
+
+3.  LoginService 
+		---> SessionStorageService 
+		---> LocalStorageService 
+
+---> 
+
+
+
+ MenuComponent (Should change is behaviour and state when ) 
+ LoginComponent  (the user logins or logis )
+ MoviesComponent (I want the movies that shown to me should be 
+ 					as per age and profile )
+ 		Where are my movies ?  ---> Remote (Fetch Them)
+
+ Then i wish to use the The complete flow 
+ 	Routers 
+ 
+ a) HttpModule 
+ b) RouterModules 
+ c) Ng2WebStorage 
+ d) JsonpModule 
+ e) rxjs
+ f) FormsModule 
+ g) ValidationsModule 
+
+
+
+1. Trying to achieve the login Screen:- 
+2. Trying to make my http work
+3. Trying to make my links work  
+
+--> LoginComponent--> LoginService-->Ng2WebStorage-->SessionStorage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git remote add origin https://github.com/nileshdevdas/imdb.git
+
+import { Injectable } from '@angular/core'
+
+
+How to write a componet 
+import {Component} from '@angular/core'
+
+@Component({
+	selector: 
+	template:
+	providers:
+	entryComponents:
+})
+
+export class ClassName{
+	
+}
+
+How to write a Service 
+import {Injectible} from '@angular/core';
+
+@Injectible 
+export class ServiceName {
+	
+	fn() : returnType{
+
+	}
+}
+
+How to Write a Directive 
+
+import {Directive, ElementRef, Renderer} from '@angular/core';
+@Directive(
+    {
+        selector : '[autoGrow]',
+        host : {
+            '(focus)' : 'onFocus()', 
+            '(blur)'  : 'onBlur()'
+        }
+    }
+)
+export class AutoGrowDirective {
+    constructor(el:ElementRef , renderer:Renderer){
+        console.log("Contructed");
+    }
+
+    onBlur(){   
+            console.log("Blurred");
+    }
+    
+    onFocus (){
+            console.log("Focussed ");
+    }
+}
+
+
+Style Binding 
+[style.backgroundColor]='isActive?a:b'
+
+Class Binding 
+[class.active]="isActive"
+
+Event Binding 
+(click)
+on-click	
+
+
+ngIf 
+ngSwitch
+hidden
+ngFor
+
+pipes  for formatting Data 
+uppercase 
+lowercase 
+number:'2.2-5'
+currency : 'AUD':true:'2.2-2'
+date : 'shortDate'
+json 
+
+
+Elvis Operators 
+?
+
+Contents 
+INsertion Points 
+ngContent
+ng-content
+
+
+HTTP
+import {Http} from '@angular/http';
+import {HttpModule,JsonpModule} from  '@angular/http';
+@NgModule({
+  imports:      [ BrowserModule,HttpModule ,JsonpModule],
+
+
+<head>
+  <base href="/">
+
+import { RouterModule }   from '@angular/router';
+
+path: the router matches this route's path to the URL in the browser address bar (home).
+component: the component that the router should create when navigating to this route (AppComponent).
+
+Router Outlet to display
+router Link to create a link
+
+
+Observable  use subsribe  
+and Promise 
+toPromise 
+import rxjs/add/operator/map
+import rxjs/add/operator/toPromise
+
+
+1. --> index.html
+			---> System.Config.js
+				--->this creates a global configruation 
+		--> i invoke the application bootstrap 
+				main.js 
+					--> AppModule--> app.module.ts/js 
+							-->DomContentLoaded==> 
+								my-app :-  app.component.ts
+
+
+Steps to setup development Environment : 
+a) You can download the angular-seed project 
+	or git clone the project 
+
+git clone https://github.com/angular/quickstart.git <yourproject>	
+b)  npm i  (downloads the required node_moddules to run the project)
+
+c)   npm start (starts the tsc -w in watchmode and a weblite server to server html pages over http )
+
+d)  http://localhost:3000/ 
+
+
+
+
+How to write my components : 
+1.    Write  file   xxxxxx.component.ts (xxxxxx is your component 
+		Name )
+2.     import {Component} from '@angular/core'
+
+3. 	   @Component({
+			 selector : 'someSelector', 
+			 template :  'someTemplate'
+		})
+4. 	   export class MyComponent {
+			// properties 
+			// functions 
+		}
+5.  Declare the component this in the app.module.ts
+		import {MyComponent} from  './mycomponent.component.'
+		declarations : [ ..... .. ,,,MyComponent]
+
+6.  How to use the component 
+	go into the app.component.ts : --> 
+		and in the template section you can add the 
+			someSelector tag specified above 
+	  declarations: [ AppComponent, MyComponent],
+
+Summary : 
+1. what are Single Page Applications 
+2. We saw what is angular 2 
+	 components 
+	 routers 
+	 directives  
+	 ...... 
+3. What is type scripting and how type scripting in implementing 
+	dom free javascript 
+
+4. we saw how to setup an angular seed 
+
+5. we saw the contents of the seed project and how bootstrap work 
+
+6. How to write a sample component 
+
+7. How run and test our applications 
+
+8. How to setup our developement environment 
+
+9. we saw how to use our component with other component 
+
+json : 
+arrays : 
+rest : 
+bootstrap : 
+---------------------------------------------------------------
+a) service
+b) pipe 
+c) menu
+d) events
+
+
+Recap Session:- 
+1. We know angular2 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/nileshdevdas/angular2.git
+
+1. How to use typescript 
+2. how to use angular2 develop environment 
+3. How to use angular2 with visual studio code 
+4. angular 2 basic 
+	  component / directives / routers / ... 
+5. We saw how to build a component 
+---------------------------------------------------------------
+
+1. We are adding boot strap to our application 
+
+2. we are developing some good menus 
+
+3. we are going to use some structral directive 
+	ngFor / ngSwitch / ngIf 
+
+4. we are going to create our own directive 
+
+5. we are going to create some more components 
+	menu bar 
+	login 
+	movieDatatable 
+6. We will write services 
+
+
+7. we will use some inbuilt pipes 
+	 uppercase/currency/percent/date/ and use formatting 
+
+8. we will also write our own pipes 
+	a pipe for filtering / ordering / and managing 
+	custom scenarios 
+
+9. event binding and two way bindings and understand how binding 
+	works in angular2 
+
+10. assembly of all the components together 
+
+i am building a service because i want the menu to come from 
+the back end service :- 
+
+the menu --> call will aso user role/token 
+
+
+() = event  (bind event)
+[] = oneway  (Read data )
+[()] = twoway (ngmodel) read/write
+* = structral directive  *(ngFor/ngIf/ngSwitch)
+xx = attribute   (attribute Directives)
+
+
+ngSwitch
+ngIf
+pipes
+http
+routing
+
+
+https://github.com/nileshdevdas/imdb.git
+
+
+
+https://jsonplaceholder.typicode.com/
+
+
+https://jsonplaceholder.typicode.com/photos
+
+
+1. add httpModule and Jsonp module to app.module.ts 
+2. add it to the imports of app.module.ts 
+3. creata new service 
+4. inmport Http/Response 
+5. import rxjs/add/operation/map" 
+6. import Observable 
+7. create a class Post(optional )
+8. in the contructor intialize the http variable 
+	this.http = http (di )
+9. write method getPosts: Observable<Post>()
+	{
+		return http.get('url').map(res => res.json());
+	}
+10. open app.component.ts 
+	import the Service 
+	provider additions 
+11. now in the constructor call the service getPost(); 
+	and set a local variable to it 
+
+12. now in the template you can using this variable 
+	and iterate the vway yout wish 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ import {Post} from './post';
               <div class="container">
                 <mainmenu></mainmenu>
                 <router-outlet></router-outlet>
-                <p *ngIf="isLoading"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i> <i class="fa fa-spinner fa-spin fa-3x"></i></p>  
+                <p *ngIf="isLoading"><i class="fa fa-spinner fa-spin fa-3x"></i></p>  
                 <table class="table table-striped table-bordered">
                     <tr *ngFor="let photo of photos">
                         <td>{{photo.id}}</td>
@@ -15,7 +15,6 @@ import {Post} from './post';
                         <td> {{photo.title}} </td>
                         <td><img width="10" height="10" src="{{photo.url}}"></td>
                     </tr>
-
                 </table>
               </div>
             `,
