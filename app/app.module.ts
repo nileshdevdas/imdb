@@ -8,12 +8,15 @@ import { LoginComponent } from './login.component';
 import { MoviesComponent } from './movies.component';
 import { MovieFilterPipe } from './moviesfilter.pipe';
 import { HighlighterDirective } from './highlight.directive';
-
 import { Ng2Webstorage } from 'ng2-webstorage';
-
 import { HttpModule, JsonpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
 import { SecurityDirective } from './security.directive';
+
+
+
+
+
 const routes: Routes = [
     {
         path: 'home',
@@ -25,7 +28,14 @@ const routes: Routes = [
     }
 ]
 @NgModule({
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2Webstorage, HttpModule, JsonpModule, RouterModule.forRoot(routes)],
+    imports: [
+            BrowserModule, 
+            FormsModule, 
+            ReactiveFormsModule, 
+            Ng2Webstorage, 
+            HttpModule, 
+            JsonpModule, 
+            RouterModule.forRoot(routes)],
     declarations: [
         AppComponent,
         WelcomeComponent,

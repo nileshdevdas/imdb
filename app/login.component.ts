@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     loginService: LoggedService;
 
     constructor(loginService: LoggedService) {
+        console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         this.loginService = loginService;
     }
     ngOnInit() {

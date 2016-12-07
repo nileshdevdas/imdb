@@ -1,14 +1,13 @@
-/*
-    LoginService is consumed by LoginComponent 
-*/
 import { Injectable } from '@angular/core';
-import {    SessionStorage, 
-            SessionStorageService, 
-        } from 'ng2-webstorage';
+import { SessionStorage, 
+         SessionStorageService, 
+       } from 'ng2-webstorage';
 @Injectable()
 export class LoggedService {
+    
     @SessionStorage()
     islogged: boolean;
+    
     @SessionStorage()
     logged : string; 
 
