@@ -4,10 +4,11 @@
             Login
         </div>
         <div class="panel-body">
-            <label for="username" class="label label-default">Username</label> <input id="username" type="email" class="form-control"
-                required  [(ngModel)]="username">
+            <label ngcon for="username" class="label label-default">Username</label> <input id="username" type="email" class="form-control"
+                required #spy minlength="10"   [(ngModel)]="username" name="username">
+              
             <label for="password" class="label label-default">Password</label> <input id="password" type="password" class="form-control"
-                required  [(ngModel)]="password">
+                required  [(ngModel)]="password" name="password">
             <br/>
             <br/>
             <button class="btn btn-default" (click)="login()">Login</button>

@@ -4,30 +4,40 @@ import { LoggedService } from './login.service';
     moduleId: module.id,
     selector: 'login',
     templateUrl: 'login.component.html',
-    providers: [LoggedService]
 })
 export class LoginComponent implements OnInit {
     username: string;
     password: string;
     loggedIn: boolean = false;
     loginService: LoggedService;
-
     constructor(loginService: LoggedService) {
-        console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        console.log("login.component.ts");
         this.loginService = loginService;
+        console.log("LoginComponent Subscribed to Subject Login")
+
+        this.loginService.logoutBroadcaster.subscribe(res => {
+            this.loggedIn = false;
+        });
+        console.log("LoginComponent Subscribed to Subject Logout")
+
+        this.loginService.loginBroadcaster.subscribe(res => {
+            this.loggedIn = true;
+        });
+
     }
     ngOnInit() {
-            this.loggedIn = this.loginService.islogged;
-            this.username = this.loginService.logged;
+        this.loggedIn = this.loginService.islogged;
+        this.username = this.loginService.logged;
     }
     ngOnDestroy() {
     }
     login() {
-        console.log("loggedin ")
-        this.loggedIn=this.loginService.login(this.username);
+        console.log("login.component.ts => loggedin ")
+        this.loggedIn = this.loginService.login(this.username);
     }
 
     logout() {
-        this.loggedIn=this.loginService.logout(this.username);
+        console.log("loggedin ")
+        this.loggedIn = this.loginService.logout(this.username);
     }
 }

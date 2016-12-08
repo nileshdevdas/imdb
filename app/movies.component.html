@@ -1,21 +1,30 @@
 <div class="container" >
-<input type="text" [(ngModel)]="mname" class="form-control">
+<input type="text" [(ngModel)]="mname" (keyup)="moviesFinder()" class="form-control">
 <table class="table table-striped table-bordered">
     <tr>
         <th>
             Name
         </th>
         <th>
-            Category
+            Year
         </th>
         <th>
-            Rating
+            imdbID
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Poster
         </th>
     </tr>
-    <tr *ngFor="let movie of movies | moviefilter:mname">
-        <td>{{movie.name}}</td>
-        <td>{{movie.category}}</td>
-        <td>{{movie.rating}}</td>
+    <tr *ngFor="let movie of movies.Search">
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.imdbID}}</td>
+        <td>{{movie.Type}}</td>
+        <td><img width="100" src="{{movie.Poster}}"></td>
     </tr>
 </table>
+
 </div>

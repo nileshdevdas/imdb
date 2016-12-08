@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NgZone } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome.component';
@@ -12,17 +12,53 @@ import { HighlighterDirective } from './highlight.directive';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { HttpModule, JsonpModule } from '@angular/http'
+
+
 import { RouterModule, Routes } from '@angular/router';
+
 import { SecurityDirective } from './security.directive';
+import { OopsComponent } from './oops.component';
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: LoginComponent
     },
     {
-        path: 'welcome',
+        path: 'movies',
+        component: MoviesComponent
+    },
+    {
+        path: 'home',
         component: WelcomeComponent
+    },
+    {
+        path: 'tv',
+        component: MoviesComponent
+    },
+    {
+        path: 'celebrities',
+        component: WelcomeComponent
+    },
+    {
+        path: 'events',
+        component: MoviesComponent
+    },
+    {
+        path: 'news',
+        component: MoviesComponent
+    },
+    {
+        path: 'signup',
+        component: MoviesComponent
+    },
+    {
+        path: 'watchlist',
+        component: MoviesComponent
+    },
+    {
+        path: '**',
+        component: OopsComponent
     }
 ]
 @NgModule({
@@ -33,10 +69,11 @@ const routes: Routes = [
         Ng2Webstorage,
         HttpModule,
         JsonpModule,
-       RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes)
     ],
     declarations: [
         AppComponent,
+        OopsComponent,
         WelcomeComponent,
         MenuComponent,
         LoginComponent,
@@ -46,4 +83,9 @@ const routes: Routes = [
         SecurityDirective],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+    constructor(private _ngZone: NgZone) {
+        console.log("app.module.ts constructor");
+    }
+}

@@ -11,12 +11,16 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li *ngFor="let menuitem of menuItems" highlighter>
-                    <a  [routerLink]='menuitem.link | lowercase'>{{menuitem.link | uppercase}}</a>
+                    <a secured [routerLink]='menuitem.link | lowercase'>{{menuitem.link | uppercase}}</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            
+            <ul class="nav navbar-nav navbar-right" *ngIf="!isloggedin" >
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" *ngIf="isloggedin" >
+                <li><a href="#top" (click)="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
             </ul>
         </div>
     </div>

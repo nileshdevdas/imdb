@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Movie } from './movies.component';
-
+import { Movies } from './movies.component';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MoviesService {
-    listMovies: Movie[] = [];
-    getMovies(): Movie[] {
-        //console.log("Getting Services from .............")
-        if (this.listMovies.length == 0) {
-            for (let i = 0; i < 100; i++) {
-                //console.log(i);
-                let movie = new Movie();
-                movie.name = "nilesh" + i;
-                movie.category = "category" + i;
-                this.listMovies.push(movie);
-            }
-        }
-        return this.listMovies;
+    private http: Http;
+    constructor(http: Http) {
+        this.http = http;
+
+    }
+    getMovies(moviesname:string): Observable<Movies> {
+        console.log("getting movies");
+        return this.http.get("http://www.omdbapi.com/?s=" + moviesname+ "&plot=full&r=json&page=1").map(res => {
+            return res.json();
+        });
     }
 }
