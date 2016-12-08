@@ -1,0 +1,5 @@
+
+<input type="text" name="" [(ngModel)]="fname" >
+<li *ngFor="let item of items | moviefilter:fname " >
+    {{item.name}}
+</li>
