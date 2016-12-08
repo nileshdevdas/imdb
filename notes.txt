@@ -681,8 +681,244 @@ https://jsonplaceholder.typicode.com/photos
 12. now in the template you can using this variable 
 	and iterate the vway yout wish 
 
+a) Components 
+b) Directives 
+c) Services 
+d) Bootstraps 
+e) Events 
+f) Structural ngFor/ngIF 
+g) Attribute Directive 
+i) Custom Directive higligter 
+j) Pipes 
+k) how to make use sessionStorage/LocalStorage 
+l) Dependency Injection 
+m) Type Script 
+n) Http Module   	
+	Observable 
+	toPromise(); 
+	.map().toPromise() (Promise); 
+o) Using external Module ng2WebStorage / BootStrap 
+p) Used Event And Menus 
+q) seeding a project 
+r) system.config.js  package and mappings 
+s) Forms Module (binding , ngModel, [()] = two way bding )
+	() event binding 
+	[]  property binding 
+t) we have constructors, methods, properties, dynamic property 
+	change 
 
 
+
+1. Want you to write routers 
+3. want you to write i c messaging
+4. want you to write the NgZone 
+2. Want you to write pipes 
+5. want you to work on form validations 
+6  # , elvis (variable)
+
+Routers : 
+
+RouterModule 
+configuration of the router rule 
+	/test ? where should i go what component i should render 
+	Componet
+
+const config = [ 
+	{
+		path : '', 
+		component : NameOf theComponent
+	}	
+
+]
+
+http://localhost:3000/
+a) i have routerModule 
+		RouterModule.forRoot(config); 
+
+b) i have routerOutlet 
+c) i have routerLink 
+d) base href=""
+
+index.html ==> 
+	<my-app>	
+			<mainmenu></mainmenu>
+			<router-outlet></router-outlet>
+			<footer></footer>
+	</my-app>
+
+
+	mainmenut.component.html 
+
+		<a href="" router-link="">Home</a>
+		<a href="" router-link="home">Home</a>
+		<a href="" router-link="movies">Movies</a>
+		<a href="" router-link="tv">TV</a>
+
+It will chck with the Root Configuraiton of the Router 
+	and based on teh pattern match decide what page to display 
+
+
+
+import { RouterModule, Routes } from '@angular/router';
+RouterModule.forRoot(routes)
+const routes: Routes = [
+
+    {
+        path: '',
+        component: LoginComponent
+    },
+    {
+        path: 'movies',
+        component: MoviesComponent
+    },
+     {
+        path: '**',
+        component: OopsComponent
+    }
+]
+3.  base href=""
+	<base href="/">
+4.  i need to create routerlinks 
+	   <li *ngFor="let menuitem of menuItems" highlighter>
+                    <a secured [routerLink]='menuitem | lowercase'>{{menuitem| uppercase}}</a>
+                </li>
+5.  <router-outlet></router-outlet>
+
+index.html --> AppComonent Service=> MenuBar & Login
+
+
+i am going to clikc the loginButoon --> 
+	//login.component.ts 
+	login(){
+		//visibility loginService
+		loginService.login();
+			emits the event
+	}
+
+
+i am also having menubar on the page 
+	in the constructor(){
+
+		loginService.loginBroadcaster.subscribe(()=>{
+
+		})
+
+	}
+
+
+1. i have create a service 
+2. i have subject in service on which interested party 
+	can observe  
+3. I inject the login Service in the App.component.ts 
+4. in the child the menu and the login i used it 
+5. every time i do a login --> service.login--> event 
+6. but my login and my menu but subscribe to the events 
+	
+
+
+
+
+i need a service: 
+a service needs to have a subject 
+a service need to provide a way to acess and subsrie over the 
+subject 
+
+i want to also broadcast info on the subject when 
+the property or any activity happens tha tneeds to sent to the other 
+
+
+
+1. Write Service 	
+2. Define Subject 
+3. Did you expose the Subject Observable 
+4. Did you identify locations where you wish to 
+	publish the events 
+	login(); 
+	subject.next(); 
+
+
+My Menu COmpionent  (Target): 
+1. Did you inject the Service (Without a provider
+2. did you create  subscriber for the subejct here 
+	 loginService.broadCasterRecvr.subscriber(res=>{
+
+	 });
+
+
+3. Did you inject the service in your login Component 
+	Source Event 
+	when some one clicks the login(); 
+	you will service.login(); 
+	service.login ---> subject.next(); 
+
+4. the last part of the puzzle is the :- 
+	register the service with the parent 
+
+
+
+
+
+index.html->
+  my-app
+  	myapp.component.ts 
+  		Service---> 
+  			---> Subject =-> 
+  		main-menu--
+  			menu.comoponent.ts 
+  			contructors (subscribe())
+  		login.component->
+  			login.service
+
+  		i click the login-->login.component.ts (login)
+  								--> loginService.login();
+  										--> subject.next();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Writing Pipes :- 
+why should i write pipes : 
+
+
+
+
+
+1. Components 
+2. Pipes 
+3. Services 
+4. Directives 
+5. Interc Communication 
+6. structural directives 
+7. attribute based directives 
+8. events 
+9. models bindings 
+10.Routers 
+11.HTTP /Observable/Promises
+12.writing complete application 
+13.NgWebStore 
+14.Validation 
+
+Link you : 
+1. PPT 
+2. SHaring notes 
+3. Sharing the complet application
+4. Shared (Dummpy Api)
+5. nilesh.devdas@outlook.com 
+6. 9923111234 
 
 
 
