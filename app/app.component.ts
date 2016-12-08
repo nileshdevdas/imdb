@@ -8,6 +8,7 @@ import { LoggedService } from './login.service';
                 <mainmenu></mainmenu>
                 <router-outlet></router-outlet>
               </div>
+              <demopipe></demopipe>
             `,
     providers: [LoggedService]
 })

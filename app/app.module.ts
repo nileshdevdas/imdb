@@ -8,17 +8,12 @@ import { LoginComponent } from './login.component';
 import { MoviesComponent } from './movies.component';
 import { MovieFilterPipe } from './moviesfilter.pipe';
 import { HighlighterDirective } from './highlight.directive';
-
 import { Ng2Webstorage } from 'ng2-webstorage';
-
 import { HttpModule, JsonpModule } from '@angular/http'
-
-
 import { RouterModule, Routes } from '@angular/router';
-
 import { SecurityDirective } from './security.directive';
 import { OopsComponent } from './oops.component';
-
+import { PipeDemoComponent } from './pipedemo.component';
 const routes: Routes = [
     {
         path: '',
@@ -72,6 +67,7 @@ const routes: Routes = [
         RouterModule.forRoot(routes)
     ],
     declarations: [
+        PipeDemoComponent,
         AppComponent,
         OopsComponent,
         WelcomeComponent,
